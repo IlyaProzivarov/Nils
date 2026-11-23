@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool InputLocked { get; set; }
     public bool IsGrounded { get; private set; }
     public float HorizontalSpeed { get; private set; }
+    public float LastJumpPressTime => lastJumpPressTime;
+    public bool JumpHeld => !InputLocked && Input.GetButton("Jump");
 
     CharacterController cc;
     Transform cam;
@@ -111,6 +113,15 @@ public class PlayerController : MonoBehaviour
         canCutJump = true;
         lastJumpPressTime = -10f;
         lastGroundedTime = -10f;
+    }
+
+    // Герой коснулся чего-то при движении: проверяем, не батут ли это
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.normal.y < 0.3f) return;              // только сверху
+        if (verticalVel > 1f) return;                 // уже летим вверх
+        var bm = hit.collider.GetComponentInParent<BounceMushroom>();
+        if (bm != null) bm.Launch(this);
     }
 
     // Вызывается батутами
