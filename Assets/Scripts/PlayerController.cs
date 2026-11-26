@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (cam == null) return;
+        if (Time.timeScale == 0f) return;
 
         IsGrounded = cc.isGrounded;
         if (IsGrounded && verticalVel <= 0.01f)
