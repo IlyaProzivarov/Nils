@@ -33139,6 +33139,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2090184721}
     m_Modifications:
+    - target: {fileID: -8757510737052267442, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8757510737052267442, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8757510737052267442, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8757510737052267442, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.527
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.53360957
@@ -33191,6 +33207,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5409744482039522382, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.079
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
       propertyPath: m_Name
       value: Visual
@@ -33202,6 +33222,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2029006202}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2029006203}
   m_SourcePrefab: {fileID: 100100000, guid: 767fbf15c9386d741ac4fc6d105abe97, type: 3}
 --- !u!4 &2029006200 stripped
 Transform:
@@ -33227,6 +33250,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHeight: 1.4
   removeColliders: 1
+--- !u!114 &2029006203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029006201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c08614e12c254495fed4d014c4a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legSwing: 45
+  armSwing: 35
+  strideRate: 2
+  bobHeight: 0.05
+  leanAngle: 8
+  airArmAngle: 140
+  airLegSpread: 35
+  stretchAmount: 0.15
+  landSquash: 0.22
+  landTime: 0.2
+  smooth: 16
 --- !u!1001 &2029192182
 PrefabInstance:
   m_ObjectHideFlags: 0
