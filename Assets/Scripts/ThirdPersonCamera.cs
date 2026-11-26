@@ -52,7 +52,7 @@ public class ThirdPersonCamera : MonoBehaviour
         // Камера не уходит за стены и деревья
         float dist = distance;
         if (Physics.SphereCast(smoothFocus, 0.3f, dir, out RaycastHit hit, distance,
-                ~0, QueryTriggerInteraction.Ignore))
+        ~(1 << 2), QueryTriggerInteraction.Ignore))
             dist = Mathf.Max(0.8f, hit.distance);
 
         transform.position = smoothFocus + dir * dist;
